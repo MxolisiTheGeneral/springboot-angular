@@ -3,3 +3,11 @@
 Welcome {{name}} to the first spring-boot-angular project.
 You can manage your todos <a routerLink="/todos">here</a>
 </div>
+<div class="container">
+     Click here to customize your Welcome message
+     <button (click)="getWelcomeMessage()" class="btn btn-success">Get Welcome Message</button>
+</div>
+<div class="container" *ngIf="welcomeMessage">
+    <h1>Your message</h1>
+    {{welcomeMessage}}
+</div>
